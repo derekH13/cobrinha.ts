@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #191919;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+canvas{
+    background-color: #111;
+    width: 40%;
+
+}
+
+.interface{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+   
+}
+
+.score-value{
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.menu-screen{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    opacity: .7;
+    z-index: 100;
+}
+
+.game-over{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    
+
+}
+
+.final-score{
+    font-weight: 500;
+    font-size: 1.5rem;
+ 
+}
+
+.btn-play{
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn-play:hover{
+
+    animation: btn .3s forwards;
+
+}
+
+
+.setas{
+    width: 20%;
+    position: absolute;
+    margin-left: -70%;
+    margin-top: 33rem;    
+    opacity: .5;
+}
+
+.cobra-bg{
+    width: 20%;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 28rem;    
+    opacity: .5;
+}
+
+.dropdown-menu li{
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover{
+    font-weight: 700;
+}
+
+
+
+
+
+@keyframes btn {
+    0%{
+        scale: 1;
+    }
+
+    10%{
+        scale: 0.95;
+    }
+
+    30%{
+        scale: .98;
+    }
+
+    100%{
+        scale: 1.05;
+    }
+}
+
+/* =============== navgation ==================== */
+
+.navbar{
+    background-color: #191919;
+}
+
+.navbar-brand {
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+
+.navbar-brand img{
+height: 40px;
+}
+
+.navbar-brand span{
+    font-size: 30px;
+    margin-left: .5rem;
+}
+
+.navbar-toggler-icon{
+    background-color: #525252;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+@media(max-width: 1000px){
+    .setas{
+        width: 80%;
+        position: absolute;
+        margin-left: 0px;
+        margin-top: 33rem;    
+        opacity: .9;
+    }
+    
+    .cobra-bg{
+       display: none;
+    }
+
+    canvas{
+        width: 90%;
+        margin-top: -25rem;
+        flex-direction: column;
+    }
+
+    .direcionar{
+ 
+        position: absolute;
+        z-index: 100;
+        height: 330px;
+        width: 100%;
+        margin-top: 32rem;
+        display: flex;
+        padding-top: 2rem;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .setas-baixo{
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+    }
+    
+    .seta{
+        width: 110px;
+        height: 110px;
+        margin-top: 1rem;
+    }
+
+    .menu-screen{
+
+        height: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+
+}
